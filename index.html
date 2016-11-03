@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>hello phaser!</title>
+        <script src="phaser/build/phaser.min.js"></script>
+ <style>
+        	canvas{
+        		margin:0 auto;
+        	}
+        </style>
+
+
+    </head>
+    <body>
+
+
+    <script type="text/javascript">
+
+
+    window.onload = function() {
+
+
+        var game = new Phaser.Game(800, 600, Phaser.AUTO, '', { preload: preload, create: create });
+
+
+        function preload () {
+
+
+            game.load.image('Breakout Paddle', 'assets/img/Breakout Paddle.png');
+
+
+        }
+
+
+        function create () {
+
+
+            var logo = game.add.sprite(game.world.centerX, game.world.centerY, 'Breakout Paddle');
+            logo.anchor.setTo(0.5, 0.5);
+
+
+        }
+
+
+    };
+
+
+    </script>
+
+
+    </body>
+</html>
+
+
